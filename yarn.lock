@@ -2313,7 +2313,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.3"
 
-"@storybook/addons@6.0.19":
+"@storybook/addons@6.0.19", "@storybook/addons@^6.0.19":
   version "6.0.19"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.0.19.tgz#55d658de66b2424d047bfe64a9a4fb009716f4b0"
   dependencies:
@@ -2627,7 +2627,7 @@
     prettier "~2.0.5"
     regenerator-runtime "^0.13.3"
 
-"@storybook/theming@6.0.19":
+"@storybook/theming@6.0.19", "@storybook/theming@^6.0.19":
   version "6.0.19"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.0.19.tgz#ba1c77ba66d189a87c2bef4601cdc3511bfe67cd"
   dependencies:
