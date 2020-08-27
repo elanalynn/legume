@@ -18,7 +18,7 @@
   },
   "scripts": {
     "build-storybook": "build-storybook -s public",
-    "build": "react-scripts build",
+    "build": "build-storybook",
     "cypress:open": "cypress open",
     "eject": "react-scripts eject",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
