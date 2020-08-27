@@ -17,13 +17,14 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "cypress:open": "cypress open",
     "eject": "react-scripts eject",
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
+    "start": "start-storybook -p 6006 -s public",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@percy/storybook": "^3.3.1",
     "@storybook/addon-actions": "^6.0.19",
     "@storybook/addon-essentials": "^6.0.19",
     "@storybook/addon-links": "^6.0.19",
