@@ -24,7 +24,8 @@
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "start": "start-storybook -p 6006 -s public",
     "storybook": "start-storybook -p 6006 -s public",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "chromatic": "npx chromatic"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,6 +54,7 @@
     "@storybook/react": "^6.0.19",
     "@storybook/theming": "^6.0.19",
     "babel-loader": "^8.1.0",
+    "chromatic": "^5.1.0",
     "cypress": "^5.0.0",
     "react-is": "^16.13.1"
   }
