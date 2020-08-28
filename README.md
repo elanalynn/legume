@@ -1,14 +1,10 @@
-# 🥒 Legume Design System 🥕
+# 🥒 Legume 🥕
 
-Legume is an OSS design system. It will eventually contain:
-
-- A React component library
-- A CSS style library
-- We'll see what happens...
+Legume is a _healthy_ design system. This repo will evolve into a component library and I plan to make a companion style library.
 
 ## Why does this exist?
 
-🎉 For fun 🪀
+🪁🪁🪁 For fun 🪁🪁🪁
 
 ## Frameworks and underlying technology
 
@@ -23,3 +19,4 @@ Legume is an OSS design system. It will eventually contain:
 - `yarn test` -- Launches the test runner in the interactive watch mode.<br />
 - `yarn run cypress:open` -- Launches Cypress test runner
 - `yarn run snapshot` -- Launches Percy (requires token)
+- `yarn run chromatic` -- deploys to Chromatic (requires token)

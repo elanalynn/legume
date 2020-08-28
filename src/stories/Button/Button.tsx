@@ -9,7 +9,7 @@ export interface ButtonProps {
   /**
    * Which side of the text does the icon sit on?
    */
-  iconSide: 'left' | 'right';
+  iconSide?: 'left' | 'right';
   /**
    * Button contents
    */

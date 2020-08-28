@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "build-storybook -s public",
+    "build-storybook": "build-storybook -s public",
     "chromatic": "npx chromatic",
     "cypress:open": "cypress open",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
