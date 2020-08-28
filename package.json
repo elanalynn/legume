@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-docs": "^6.0.20",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
@@ -17,15 +18,12 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "build-storybook": "build-storybook -s public",
-    "build": "build-storybook",
+    "build": "build-storybook -s public",
+    "chromatic": "npx chromatic",
     "cypress:open": "cypress open",
-    "eject": "react-scripts eject",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "start": "start-storybook -p 6006 -s public",
-    "storybook": "start-storybook -p 6006 -s public",
-    "test": "react-scripts test",
-    "chromatic": "npx chromatic"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"

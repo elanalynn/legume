@@ -6,7 +6,7 @@ import { Page, PageProps } from './Page';
 import * as HeaderStories from '../Header/Header.stories';
 
 export default {
-  title: 'Example/Page',
+  title: 'Layouts/Page',
   component: Page,
 } as Meta;
 

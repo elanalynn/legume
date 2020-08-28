@@ -3,50 +3,85 @@ import './button.scss';
 
 export interface ButtonProps {
   /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
    * What background color to use
    */
   backgroundColor?: string;
+  /**
+   * Which side of the text does the icon sit on?
+   */
+  iconSide: 'left' | 'right';
+  /**
+   * Button contents
+   */
+  children: string;
+  /**
+   * Optional click handler
+   */
+  onClick?: () => void;
   /**
    * How large should the button be?
    */
   size?: 'small' | 'medium' | 'large';
   /**
-   * Button contents
+   * Is this button a principal call to action or a dangerous action?
    */
-  label: string;
+  type?: 'primary' | 'secondary' | 'danger';
   /**
-   * Optional click handler
+   * Which vegetable emoji to include.
    */
-  onClick?: () => void;
+  vegetable?:
+    | 'broccoli'
+    | 'carrot'
+    | 'corn'
+    | 'cucumber'
+    | 'eggplant'
+    | 'lettuce'
+    | 'pepper'
+    | 'tomato'
+    | 'yam';
 }
 
 /**
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = 'medium',
   backgroundColor,
-  label,
+  children,
+  iconSide = 'left',
+  size = 'medium',
+  type = 'secondary',
+  vegetable = 'pepper',
   ...props
 }) => {
-  const mode = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
+  const typeMap = {
+    primary: 'legume-button--primary',
+    secondary: 'legume-button--secondary',
+    danger: 'legume-button--danger',
+  };
+
+  const iconMap = {
+    broccoli: '🥦',
+    carrot: '🥕',
+    corn: '🌽',
+    cucumber: '🥒',
+    eggplant: '🍆',
+    lettuce: '🥬',
+    pepper: '🌶',
+    tomato: '🍅',
+    yam: '🍠',
+  };
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
-      )}
+      className={`legume-button legume-button--${size} ${typeMap[type]}`}
       style={{ backgroundColor }}
       {...props}
     >
-      {label}
+      {iconSide === 'left' && `${iconMap[vegetable]}`}
+      &nbsp;
+      {children}
+      &nbsp;
+      {iconSide === 'right' && `${iconMap[vegetable]}`}
     </button>
   );
 };

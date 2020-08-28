@@ -1,29 +1,51 @@
-.storybook-button {
-  font-weight: 700;
+$primary: #969600;
+$secondary: #007579;
+$danger: #ce2001;
+
+@mixin legume-button {
+  color: white;
+  font-weight: 400;
+  letter-spacing: 2px;
   border: 0;
-  border-radius: 3em;
+  border-radius: 5px;
   cursor: pointer;
   display: inline-block;
+  box-shadow: 0 0 5px #555;
   line-height: 1;
+
+  &:hover {
+    box-shadow: 0 0 6px #444;
+  }
 }
-.storybook-button--primary {
-  color: white;
-  background-color: #1ea7fd;
+
+.legume-button--primary {
+  @include legume-button;
+  background-color: $primary;
 }
-.storybook-button--secondary {
-  color: #333;
-  background-color: transparent;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+.legume-button--secondary {
+  @include legume-button;
+  background-color: $secondary;
 }
-.storybook-button--small {
-  font-size: 12px;
+
+.legume-button--danger {
+  @include legume-button;
+  background-color: $danger;
+}
+
+.legume-button--small {
+  @include legume-button;
+  font-size: 0.75rem;
   padding: 10px 16px;
 }
-.storybook-button--medium {
-  font-size: 14px;
+
+.legume-button--medium {
+  @include legume-button;
+  font-size: 1rem;
   padding: 11px 20px;
 }
-.storybook-button--large {
-  font-size: 16px;
+
+.legume-button--large {
+  font-size: 1.25rem;
   padding: 12px 24px;
 }
